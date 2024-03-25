@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch</title>
+    <link href="./bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <h3>Movimentos</h3>
+
+    <label for="txtPixel">Quantidade de pixel(s)</label>
+    <input type="text" id="txtPixel" value="1"/>
+    <br/>
+
+    MOVIMENTOS
+    <br>
+    <button onclick="moverParaEsquerda()"> mover para esquerda </button>
+    <button onclick="moverParaDireita()"> mover para direita </button>
+    <button onclick="moverParaCima()"> mover para cima </button>
+    <button onclick="moverParaBaixo()"> mover para baixo </button>
+    <button onclick="girarHorario()">girar sentido horario</button>
+    <button onclick="girarAntiHorario()">girar anti horario</button>
+    <button onclick="deslizarParaDireita()">deslizar para direita</button>
+    <button onclick="deslizarParaEsquerda()">deslizar para esquerda</button>
+    <button onclick="deslizarParaCima()">deslizar para cima</button>
+    <button onclick="deslizarParaBaixo()">deslizar para baixo</button>
+    <button onclick="direçaoE()">aponte para a direçao esquerda</button>
+    <button onclick="direçaoD()">aponte para a direçao direita</button>
+    <button onclick="irPosiçao()">ir para posiçao aleatoria</button>
+    <button onclick="deslizarPosiçao()">deslizar até a posiçao aleatoria</button>
+    <button onclick="seguirMouse()">seguir o mouse</button>
+    <script>
+      function seguirMouse() {
+        document.addEventListener('mousemove',function(e) {
+          var button = 
+      document.querySelector('button');
+        button.style.position = 'absolute';
+        button.style.left = e.pageX + 'px';
+        button.style.top = e.pageY + 'px';
+        });
+      }
+    </script>
+    <button onclick="">voltar ao inicio</button>
+    <button onclick="apontePara()">Aponte para direção</button>
+<input type="number" id="direcao" placeholder="Digite o número da direção" />
+    <br>
+    <br>
+    APARÊNCIA
+    <br>
+    <button onclick="">"dizer" oii por "n" segundos</button>
+    <button onclick="">trocar o avatar</button>
+    <button onclick="">trocar cenario</button>
+    <button onclick="">resetar cenario</button>
+    <button onclick="">aumentar avatar</button>
+    <button onclick="">diminuir avatar</button>
+    <button onclick="">mostrar avatar</button>
+    <button onclick="">esconder avatar</button>
+    <br>
+    <br>
+    SOM
+    <br>
+    <button onclick="">tocar o som</button>
+    <button onclick="">parar o som</button>
+    <button onclick="">aumentar o som</button>
+    <button onclick="">diminuir o som</button>
+    <br>
+    <br>
+    <!-- Deverão ser criadas mais variáveis de ambiente (const) para definir o tamanho mínimo e máximo do avatar (podendo ser digitado através dos inputs de tamanho mínimo e tamanho máximo)-->
+    <div id="avatarContainer">
+        <img src="./avatar.png" id="imgAvatar"/>
+    </div>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+<script src="./scratch.js"></script>  
+</html>
